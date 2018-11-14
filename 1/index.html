@@ -53,13 +53,10 @@ Tip: Investigar el evento window.onload
   </head>
 
   <body>
-    <script type="text/javascript">
-        alert("hola mundo");
-    </script>
 
     <div class="container-gallery">
       <div class="gallery">
-        <figure><img class="img-color img-gray" src="images/img01.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="https://picsum.photos/200/300/?random" alt=""></figure>
         <figure><img class="img-color img-gray" src="images/img02.jpg" alt=""></figure>
         <figure><img class="img-color img-gray" src="images/img03.jpg" alt=""></figure>
       </div>
@@ -78,11 +75,7 @@ Tip: Investigar el evento window.onload
         <figure><img class="img-color img-gray" src="images/img02.jpg" alt=""></figure>
         <figure><img class="img-color img-gray" src="images/img03.jpg" alt=""></figure>
       </div>
-      <div class="gallery">
-        <figure><img class="img-color img-gray" src="images/img01.jpg" alt=""></figure>
-        <figure><img class="img-color img-gray" src="images/img02.jpg" alt=""></figure>
-        <figure><img class="img-color img-gray" src="images/img03.jpg" alt=""></figure>
-      </div>
+
       <div class="gallery">
         <figure><img class="img-color img-gray" src="images/img04.jpg" alt=""></figure>
         <figure><img class="img-color img-gray" src="images/img05.jpg" alt=""></figure>
@@ -113,13 +106,17 @@ Tip: Investigar el evento window.onload
 
       <script type="text/javascript">
 
-            $(window).on("click", function(){
-              counter = $("#counter").text();
-              counter = parseInt(counter);
-              $("#counter").text(counter + 1);
+            // A $( document ).ready() block.
+            $( document ).ready(function() {
+              console.log( "ready!" );
+              alert("Documento Listo");
             });
 
-            alert("hola mundo2");
+            // A $( document ).ready() block.
+            $( window ).on("load",function() {
+              console.log( "load!" );
+              alert("Load Listo");
+            });
       </script>
     </div>
   </body>
