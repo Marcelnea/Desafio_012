@@ -1,0 +1,126 @@
+<!-- En una página con muchas imágenes mostrar una alerta cuando esté
+cargado el DOM y otra después que las imágenes se hayan cargado.
+
+Tip: Investigar el evento window.onload
+
+-->
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Galería Imágenes más alerta</title>
+    <style media="screen">
+
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+      }
+
+      .container-gallery{
+        max-widht: 1200px;
+        widht: 100%;
+        background: ;
+        padding: 20px;
+        margin: auto;
+        margin-top: 50px;
+      }
+
+      .gallery{
+        display: flex;
+        justify-content: center;
+        flex-weap: wrap; <!-- img llegue a su limite bajo la otra img -->
+      }
+
+      figure{
+        widht: 300px;
+        height: 200px;
+        overflow: hidden; <!--para que recorte a medida las fotos -->
+        margin: 10px;
+        padding: 10px;
+      }
+
+      .gray{
+        filter:gray;
+        -webkit-filter: grauscale(1);
+        filter: grayscale(1);
+        transition: 1s;
+      }
+
+      </style>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+        alert("hola mundo");
+    </script>
+
+    <div class="container-gallery">
+      <div class="gallery">
+        <figure><img class="img-color img-gray" src="images/img01.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img02.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img03.jpg" alt=""></figure>
+      </div>
+      <div class="gallery">
+        <figure><img class="img-color img-gray" src="images/img01.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img02.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img03.jpg" alt=""></figure>
+      </div>
+      <div class="gallery">
+        <figure><img class="img-color img-gray" src="images/img01.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img02.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img03.jpg" alt=""></figure>
+      </div>
+      <div class="gallery">
+        <figure><img class="img-color img-gray" src="images/img01.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img02.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img03.jpg" alt=""></figure>
+      </div>
+      <div class="gallery">
+        <figure><img class="img-color img-gray" src="images/img01.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img02.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img03.jpg" alt=""></figure>
+      </div>
+      <div class="gallery">
+        <figure><img class="img-color img-gray" src="images/img04.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img05.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img06.jpg" alt=""></figure>
+      </div>
+      <div class="gallery">
+        <figure><img class="img-color img-gray" src="images/img04.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img05.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img06.jpg" alt=""></figure>
+      </div>
+      <div class="gallery">
+        <figure><img class="img-color img-gray" src="images/img04.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img05.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img06.jpg" alt=""></figure>
+      </div>
+      <div class="gallery">
+        <figure><img class="img-color img-gray" src="images/img04.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img05.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img06.jpg" alt=""></figure>
+      </div>
+      <div class="gallery">
+        <figure><img class="img-color img-gray" src="images/img04.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img05.jpg" alt=""></figure>
+        <figure><img class="img-color img-gray" src="images/img06.jpg" alt=""></figure>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+      <script type="text/javascript">
+
+            $(window).on("click", function(){
+              counter = $("#counter").text();
+              counter = parseInt(counter);
+              $("#counter").text(counter + 1);
+            });
+
+            alert("hola mundo2");
+      </script>
+    </div>
+  </body>
+</html>
